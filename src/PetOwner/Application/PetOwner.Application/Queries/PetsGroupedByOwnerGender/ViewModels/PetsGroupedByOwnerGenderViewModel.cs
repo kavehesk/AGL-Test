@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PetOwner.Application.Queries.Pets.ViewModels
+namespace PetOwner.Application.Queries.PetsGroupedByOwnerGender.ViewModels
 {
     public class PetsGroupedByOwnerGenderViewModel
     {

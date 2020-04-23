@@ -1,10 +1,11 @@
 ﻿using PetOwner.Application.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace PetOwner.Application.Repositories
 {
     public interface IPetOwnerService
     {
-        IReadOnlyCollection<OwnersAndTheirPets> GetAllOwnersAndTheirPets();
+        Task<IReadOnlyCollection<OwnersAndTheirPets>> GetAllOwnersAndTheirPets();
     }
 }
