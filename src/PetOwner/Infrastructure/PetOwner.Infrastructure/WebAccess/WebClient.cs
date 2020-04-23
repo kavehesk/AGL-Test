@@ -1,20 +1,32 @@
-﻿using System.Net.Http;
+﻿using Newtonsoft.Json;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace PetOwner.Infrastructure.WebAccess
 {
     class WebClient<T> : IWebClient<T>
     {
-        private readonly HttpClient _httpClient ;
+        private readonly IHttpClientFactory _clientFactory;
 
-        public WebClient(HttpClient httpClient)
+        public WebClient(IHttpClientFactory clientFactory)
         {
-            _httpClient = httpClient;
+            _clientFactory = clientFactory;
         }
 
         public async Task<T> Get(string serviceEndpointUrl)
         {
-            return default(T);
+            var request = new HttpRequestMessage(HttpMethod.Get, serviceEndpointUrl);
+
+            var client = _clientFactory.CreateClient();
+
+            var response = await client.SendAsync(request);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var responseString = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<T>(responseString);
+            }
+            throw new WebApiException(response, response.Content);
         }
     }
 }

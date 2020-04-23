@@ -26,7 +26,7 @@ namespace PetOwner.Web
         {
             services.AddControllersWithViews();
             services.AddAllQueries();
-            services.AddAllInfrastructureServices();
+            services.AddAllInfrastructureServices(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

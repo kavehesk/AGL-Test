@@ -1,4 +1,4 @@
-﻿using PetOwner.Application.Models;
+﻿using PetOwner.Application.ReadModels;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

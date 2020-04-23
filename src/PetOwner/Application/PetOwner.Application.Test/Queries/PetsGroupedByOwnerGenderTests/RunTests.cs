@@ -1,6 +1,5 @@
 ﻿using NSubstitute;
 using NUnit.Framework;
-using PetOwner.Application.Models;
 using PetOwner.Application.Queries.PetsGroupedByOwnerGender;
 using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,6 +9,7 @@ using System.Threading.Tasks;
 using System.Linq;
 using PetOwner.Application.DependencyInjection;
 using PetOwner.Application.Test.TestDataSources;
+using PetOwner.Application.ReadModels;
 
 namespace PetOwner.Application.Test.Queries.PetsGroupedByOwnerGenderTests
 {

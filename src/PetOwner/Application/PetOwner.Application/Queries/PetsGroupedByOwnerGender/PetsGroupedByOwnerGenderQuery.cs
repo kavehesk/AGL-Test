@@ -1,8 +1,8 @@
-﻿using PetOwner.Application.Models;
-using PetOwner.Application.Queries.PetsGroupedByOwnerGender.ViewModels;
+﻿using PetOwner.Application.Queries.PetsGroupedByOwnerGender.ViewModels;
 using System.Threading.Tasks;
 using System.Linq;
 using PetOwner.Application.Services;
+using PetOwner.Application.ReadModels;
 
 namespace PetOwner.Application.Queries.PetsGroupedByOwnerGender
 {

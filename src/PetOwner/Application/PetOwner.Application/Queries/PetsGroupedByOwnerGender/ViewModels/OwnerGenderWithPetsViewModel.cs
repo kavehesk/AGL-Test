@@ -1,5 +1,4 @@
-﻿using PetOwner.Application.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace PetOwner.Application.Queries.PetsGroupedByOwnerGender.ViewModels
 {

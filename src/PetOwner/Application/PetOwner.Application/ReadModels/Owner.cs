@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PetOwner.Application.Models
+namespace PetOwner.Application.ReadModels
 {
     public class Owner
     {

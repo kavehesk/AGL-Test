@@ -1,4 +1,4 @@
-﻿namespace PetOwner.Application.Models
+﻿namespace PetOwner.Application.ReadModels
 {
     public enum PetType
     {

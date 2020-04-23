@@ -1,5 +1,5 @@
-﻿using PetOwner.Application.Models;
-using PetOwner.Application.Queries.PetsGroupedByOwnerGender.ViewModels;
+﻿using PetOwner.Application.Queries.PetsGroupedByOwnerGender.ViewModels;
+using PetOwner.Application.ReadModels;
 using System.Threading.Tasks;
 
 namespace PetOwner.Application.Queries.PetsGroupedByOwnerGender
