@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PetOwner.Application.DependencyInjection;
 
 namespace PetOwner.Web
 {
@@ -24,6 +25,8 @@ namespace PetOwner.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddAllQueries();
+            services.AddAllInfrastructureServices();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
