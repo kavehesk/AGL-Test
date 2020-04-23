@@ -7,7 +7,7 @@ namespace PetOwner.Infrastructure.Services
 {
     class PetOwnerService : IPetOwnerService
     {
-        public Task<IReadOnlyCollection<OwnerPet>> GetAllOwnersAndTheirPets()
+        public Task<IReadOnlyCollection<Owner>> GetAllOwners()
         {
             throw new System.NotImplementedException();
         }

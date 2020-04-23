@@ -1,4 +1,6 @@
-﻿namespace PetOwner.Application.Models
+﻿using System.Collections.Generic;
+
+namespace PetOwner.Application.Models
 {
     public class Owner
     {
@@ -7,5 +9,7 @@
         public Gender Gender { get; set; }
 
         public byte Age { get; set; }
+
+        public IReadOnlyCollection<Pet> Pets { get; set; }
     }
 }

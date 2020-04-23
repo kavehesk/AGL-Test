@@ -6,6 +6,6 @@ namespace PetOwner.Application.Services
 {
     public interface IPetOwnerService : IService
     {
-        Task<IReadOnlyCollection<OwnerPet>> GetAllOwnersAndTheirPets();
+        Task<IReadOnlyCollection<Owner>> GetAllOwners();
     }
 }

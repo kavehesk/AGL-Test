@@ -17,16 +17,27 @@ namespace PetOwner.Application.Queries.PetsGroupedByOwnerGender
 
         public async Task<PetsGroupedByOwnerGenderViewModel> Run(PetType petType)
         {
-            var ownersAndTheirPets = await _petOwnerService.GetAllOwnersAndTheirPets();
+            var owners = await _petOwnerService.GetAllOwners();
 
-            var catOwnerGenderGroups =
-                from op in ownersAndTheirPets
+            var ownerGenderAndPets=
+                from op in owners
                 from p in op.Pets
-                where p.Type == PetType.Cat
-                group op by op.Owner.Gender;
+                where p.Type == petType
+                select new { op.Gender, p.Name };
 
+            var ownerGenderWithPetsViewModels =
+                (from ogap in ownerGenderAndPets
+                group ogap by ogap.Gender into g
+                select new OwnerGenderWithPetsViewModel
+                {
+                    Gender = g.Key.ToString(),
+                    PetNames = g.Select(x => x.Name).OrderBy(x => x).ToList()
+                }).ToList();
 
-            return null;
+            return new PetsGroupedByOwnerGenderViewModel
+            {
+                Genders = ownerGenderWithPetsViewModels
+            };
         }
     }
 }

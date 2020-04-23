@@ -1,21 +1,18 @@
 ﻿using PetOwner.Application.Models;
 using System.Collections.Generic;
 
-namespace PetOwner.Application.Test.TestData
+namespace PetOwner.Application.Test.TestDataSources
 {
-    static class OwnerPetCollection
+    static class TestData
     {
-        public static List<OwnerPet> OwnerPetTestData = new List<OwnerPet>()
+        public static List<Owner> Owners = new List<Owner>()
         {
-            new OwnerPet()
+           new Owner
             {
-                Owner=new Owner
-                {
-                    Name="Bob",
-                    Age=23,
-                    Gender= Gender.Male
-                },
-                Pets=new List<Pet>()
+                Name = "Bob",
+                Age = 23,
+                Gender = Gender.Male,
+                Pets = new List<Pet>()
                 {
                     new Pet()
                     {
@@ -29,15 +26,12 @@ namespace PetOwner.Application.Test.TestData
                     }
                 }
             },
-            new OwnerPet()
+            new Owner
             {
-                 Owner=new Owner
-                {
-                    Name="Jennifer",
-                    Age=18,
-                    Gender= Gender.Female
-                },
-                Pets=new List<Pet>()
+                Name = "Jennifer",
+                Age = 18,
+                Gender = Gender.Female,
+                Pets = new List<Pet>()
                 {
                     new Pet()
                     {
@@ -46,26 +40,19 @@ namespace PetOwner.Application.Test.TestData
                     }
                 }
             },
-            new OwnerPet()
+            new Owner
             {
-                 Owner=new Owner
-                {
-                    Name="Steve",
-                    Age=45,
-                    Gender= Gender.Male
-                },
-                Pets=new List<Pet>()
-            }
-            ,
-             new OwnerPet()
+                Name = "Steve",
+                Age = 45,
+                Gender = Gender.Male,
+                Pets = new List<Pet>()
+            },
+            new Owner
             {
-                 Owner=new Owner
-                {
-                    Name="Fred",
-                    Age=40,
-                    Gender= Gender.Male
-                },
-                Pets=new List<Pet>()
+                Name = "Fred",
+                Age = 40,
+                Gender = Gender.Male,
+                Pets = new List<Pet>()
                 {
                     new Pet()
                     {
@@ -81,7 +68,7 @@ namespace PetOwner.Application.Test.TestData
                     {
                         Name="Sam",
                         Type=PetType.Dog
-                    },                   
+                    },
                     new Pet()
                     {
                         Name="Jim",
@@ -89,15 +76,12 @@ namespace PetOwner.Application.Test.TestData
                     }
                 }
             },
-            new OwnerPet()
+            new Owner
             {
-                 Owner=new Owner
-                {
-                    Name="Samantha",
-                    Age=40,
-                    Gender= Gender.Female
-                },
-                Pets=new List<Pet>()
+                Name = "Samantha",
+                Age = 40,
+                Gender = Gender.Female,
+                Pets = new List<Pet>()
                 {
                     new Pet()
                     {
@@ -106,15 +90,12 @@ namespace PetOwner.Application.Test.TestData
                     }
                 }
             },
-            new OwnerPet()
+            new Owner
             {
-                 Owner=new Owner
-                {
-                    Name="Alice",
-                    Age=64,
-                    Gender= Gender.Female
-                },
-                Pets=new List<Pet>()
+                Name = "Alice",
+                Age = 64,
+                Gender = Gender.Female,
+                Pets = new List<Pet>()
                 {
                     new Pet()
                     {
@@ -127,8 +108,7 @@ namespace PetOwner.Application.Test.TestData
                         Type=PetType.Fish
                     }
                 }
-            },
-
+            }
         };
     }
 }
