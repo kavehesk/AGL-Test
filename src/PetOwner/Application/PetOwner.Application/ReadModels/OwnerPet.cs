@@ -2,7 +2,7 @@
 
 namespace PetOwner.Application.Models
 {
-    public class OwnersAndTheirPets
+    public class OwnerPet
     {
         public Owner Owner { get; set; }
         public IReadOnlyCollection<Pet> Pets { get; set; }
