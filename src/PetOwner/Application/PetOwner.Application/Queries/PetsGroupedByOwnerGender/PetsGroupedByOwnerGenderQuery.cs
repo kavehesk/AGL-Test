@@ -1,12 +1,12 @@
 ﻿using PetOwner.Application.Models;
 using PetOwner.Application.Queries.PetsGroupedByOwnerGender.ViewModels;
-using PetOwner.Application.Repositories;
 using System.Threading.Tasks;
 using System.Linq;
+using PetOwner.Application.Services;
 
 namespace PetOwner.Application.Queries.PetsGroupedByOwnerGender
 {
-    class PetsGroupedByOwnerGenderQuery : IPetsGroupByOwnerGenderQuery
+    class PetsGroupedByOwnerGenderQuery : IPetsGroupedByOwnerGenderQuery
     {
         private readonly IPetOwnerService _petOwnerService;
 

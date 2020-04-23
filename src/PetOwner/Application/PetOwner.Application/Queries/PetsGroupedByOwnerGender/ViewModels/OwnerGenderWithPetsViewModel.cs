@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace PetOwner.Application.Queries.PetsGroupedByOwnerGender.ViewModels
 {
-    public class PetOwnerGenderViewModel
+    public class OwnerGenderWithPetsViewModel
     {
-        public Gender Gender;
+        public string Gender;
         public IReadOnlyCollection<string> PetNames;
     }
 }

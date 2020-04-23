@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace PetOwner.Application.Repositories
+namespace PetOwner.Application.Services
 {
-    public interface IPetOwnerService
+    public interface IPetOwnerService : IService
     {
         Task<IReadOnlyCollection<OwnersAndTheirPets>> GetAllOwnersAndTheirPets();
     }

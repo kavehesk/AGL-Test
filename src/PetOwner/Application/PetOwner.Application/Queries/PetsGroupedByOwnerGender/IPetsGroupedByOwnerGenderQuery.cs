@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace PetOwner.Application.Queries.PetsGroupedByOwnerGender
 {
-    public interface IPetsGroupByOwnerGenderQuery : IQuery
+    public interface IPetsGroupedByOwnerGenderQuery : IQuery
     {
         Task<PetsGroupedByOwnerGenderViewModel> Run(PetType petType);
     }
