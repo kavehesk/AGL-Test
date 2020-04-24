@@ -5,9 +5,9 @@ This repository contains a solution developed for AGL developer test.
 The result has been deployed to an Azure WebApp and can be accessed at [PetOwners](https://petownerweb20200424122316.azurewebsites.net/)
 
 ## Design Objectives
-— High cohesion 
-— Low coupling
-— Separation of concerns
+- High cohesion 
+- Low coupling
+- Separation of concerns
 
 Please note that some parts of the application have been over engineered for showcasing purposes. 
 
