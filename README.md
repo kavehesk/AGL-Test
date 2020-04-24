@@ -23,7 +23,7 @@ Please note that some parts of the application have been over engineered for sho
 
 ## Solution structure
 #### Web : 
-This layer contains presentation logic. Also, as it is the start-up project, application settings are stored in appsettings.json and communicated to other parts of application by [Option Pattern](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options?view=aspnetcore-3.1).
+This layer contains presentation logic. Also, as it is the start-up project, application settings are stored in appsettings.json and communicated to other parts of application using [Option Pattern](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options?view=aspnetcore-3.1).
 #### Application: 
 This layer contains the business logic of the application. All other layers are dependent on Application project and the application layer has minimum dependency. 
 
@@ -44,5 +44,5 @@ This layer helps the application layer to fulfill its responsibility. It contain
 
 
 ## Dependency Injection
-Dependency injection is used throughout the project and each project is responsible for setting up its own services. Doing so, the same setup process can be used in unit tests in addition to run-time.
+Dependency injection is used throughout the project and each project is responsible for setting up its own services. Doing so, the same setup process can be used in unit tests in addition to application startup.
 
