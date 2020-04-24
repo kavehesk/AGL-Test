@@ -1,0 +1,17 @@
+﻿@model PetOwner.Application.Queries.PetsGroupedByOwnerGender.ViewModels.PetsGroupedByOwnerGenderViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@foreach (var gender in Model.Genders)
+{
+    <div class="container">
+        <label>@gender.Gender</label>
+        <ul>
+            @foreach (var petName in gender.PetNames)
+            {
+                <li>@petName</li>
+            }
+        </ul>
+    </div>
+}
