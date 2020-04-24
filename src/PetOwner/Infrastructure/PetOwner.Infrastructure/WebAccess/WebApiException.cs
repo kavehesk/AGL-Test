@@ -4,6 +4,9 @@ using System.Net.Http;
 
 namespace PetOwner.Infrastructure.WebAccess
 {
+    /// <summary>
+    /// This class encapsulates HTTP response details
+    /// </summary>
     class WebApiException : Exception
     {
         public HttpResponseMessage Response { get; set; }

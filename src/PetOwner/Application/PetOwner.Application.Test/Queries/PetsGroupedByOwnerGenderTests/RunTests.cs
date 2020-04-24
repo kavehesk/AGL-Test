@@ -7,9 +7,9 @@ using PetOwner.Application.Services;
 using FluentAssertions;
 using System.Threading.Tasks;
 using System.Linq;
-using PetOwner.Application.DependencyInjection;
 using PetOwner.Application.Test.TestDataSources;
 using PetOwner.Application.ReadModels;
+using PetOwner.Application.DependencyInjections;
 
 namespace PetOwner.Application.Test.Queries.PetsGroupedByOwnerGenderTests
 {

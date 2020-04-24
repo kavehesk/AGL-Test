@@ -19,14 +19,14 @@ namespace PetOwner.Application.Queries.PetsGroupedByOwnerGender
         {
             var owners = await _petOwnerService.GetAllOwners();
 
-            var ownerGenderAndPets=
+            var ownerGenderAndPetNames=
                 from op in owners
                 from p in op.Pets
                 where p.Type == petType
                 select new { op.Gender, p.Name };
 
             var ownerGenderWithPetsViewModels =
-                (from ogap in ownerGenderAndPets
+                (from ogap in ownerGenderAndPetNames
                 group ogap by ogap.Gender into g
                 select new OwnerGenderWithPetsViewModel
                 {

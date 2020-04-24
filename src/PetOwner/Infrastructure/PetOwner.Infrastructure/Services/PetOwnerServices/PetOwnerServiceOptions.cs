@@ -1,7 +1,7 @@
 ﻿namespace PetOwner.Infrastructure.Services.PetOwnerServices
 {
-    public class PetOwnerServiceOptions
+    class PetOwnerServiceOptions
     {
-        public string AglPetOwnerEndpoint { get; set; }
+        public string AglPetOwnerEndpointUrl { get; set; }
     }
 }

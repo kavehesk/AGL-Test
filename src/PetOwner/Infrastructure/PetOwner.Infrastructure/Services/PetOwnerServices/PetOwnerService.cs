@@ -25,9 +25,14 @@ namespace PetOwner.Infrastructure.Services.PetOwnerServices
             _options = options.CurrentValue;
         }
 
+        /// <summary>
+        /// Retrieves all the owners from AGL API and translate the result to the application read model
+        /// </summary>
+        /// <returns></returns>
         public async Task<IReadOnlyCollection<Owner>> GetAllOwners()
         {
-            var owners = await _webClient.Get(_options.AglPetOwnerEndpoint);
+            var owners = await _webClient.Get(_options.AglPetOwnerEndpointUrl);
+            
             return owners.Select(_ownersTranslator.Translate).ToList();
         }
     }

@@ -4,10 +4,17 @@ using System;
 using System.Linq;
 using System.Reflection;
 
-namespace PetOwner.Application.DependencyInjection
+namespace PetOwner.Application.DependencyInjections
 {
     public static class ServiceCollectionExtensions
     {
+        /// <summary>
+        /// Finds all the implementation of the requested interface in the target assembly and add them to the service collection
+        /// </summary>
+        /// <param name="service"></param>
+        /// <param name="assembly"></param>
+        /// <param name="interfaceType"></param>
+        /// <returns></returns>
         public static IServiceCollection AddAllImplementations(this IServiceCollection service, Assembly assembly, Type interfaceType)
         {
             var implementations = assembly.GetTypes()
@@ -27,6 +34,11 @@ namespace PetOwner.Application.DependencyInjection
             return service;
         }
 
+        /// <summary>
+        /// Adds all the application layer services to the service collection
+        /// </summary>
+        /// <param name="service"></param>
+        /// <returns></returns>
         public static IServiceCollection AddAllApplicationServices(this IServiceCollection service)
         {
             var interfaceType = typeof(IQuery);

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PetOwner.Application.DependencyInjections;
 using PetOwner.Application.Services;
 using PetOwner.Infrastructure.Services.PetOwnerServices;
 using PetOwner.Infrastructure.Services.PetOwnerServices.Translators;
