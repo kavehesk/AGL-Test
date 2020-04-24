@@ -9,6 +9,11 @@ The result has been deployed to an Azure WebApp and can be accessed at [PetOwner
 - Low coupling
 - Separation of concerns
 
+To achieve the objectives:
+- Classes and methods follow [Single Responsible Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle)
+- To prevent unnecessary coupling, classes and methods are only defined *public* if it's required
+- Nowhere in the code, classes create their own dependencies as this responsiblity has been given to the IoC container ([Dependency Inversion Principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle))
+
 Please note that some parts of the application have been over engineered for showcasing purposes. 
 
 ## Solution structure
