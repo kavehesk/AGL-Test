@@ -24,7 +24,7 @@ namespace PetOwner.Application.Test.Queries.PetsGroupedByOwnerGenderTests
         {
             var services = new ServiceCollection(); ;
             
-            services.AddAllQueries();
+            services.AddAllApplicationServices();
 
             _petOwnerService = Substitute.For<IPetOwnerService>();
             services.AddSingleton(_petOwnerService);

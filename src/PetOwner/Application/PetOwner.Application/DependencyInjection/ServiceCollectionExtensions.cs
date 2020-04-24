@@ -27,7 +27,7 @@ namespace PetOwner.Application.DependencyInjection
             return service;
         }
 
-        public static IServiceCollection AddAllQueries(this IServiceCollection service)
+        public static IServiceCollection AddAllApplicationServices(this IServiceCollection service)
         {
             var interfaceType = typeof(IQuery);
             return service.AddAllImplementations(Assembly.GetAssembly(interfaceType), interfaceType);

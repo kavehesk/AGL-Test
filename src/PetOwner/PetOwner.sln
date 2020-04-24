@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetOwner.Infrastructure", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetOwner.Web", "Web\PetOwner.Web\PetOwner.Web.csproj", "{C915687E-6907-4736-B776-DDE7C18C4CF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetOwner.Application.Test", "Application\PetOwner.Application.Test\PetOwner.Application.Test.csproj", "{B2A9B30A-CD4C-4C6A-AFCD-1D50C4245FEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetOwner.Application.Test", "Application\PetOwner.Application.Test\PetOwner.Application.Test.csproj", "{B2A9B30A-CD4C-4C6A-AFCD-1D50C4245FEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
